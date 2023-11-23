@@ -1,0 +1,208 @@
+@import url('navbar.css');
+
+.addAnime {
+    z-index: 999999;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: black;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+    }
+}
+
+.tooltip {
+    color: white;
+    z-index: 99999;
+    position: absolute;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+
+    & .body {
+        background-color: green;
+        border-radius: 12px;
+        padding: 5px;
+        height: 4rem;
+        width: 95%;
+
+        & .mensage {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+
+        & #fechar {
+            float: right;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+    }
+}
+
+.banner {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: 2rem;
+
+    
+    & .content {
+        padding: 5px;
+        border-radius: 7px;
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        left: 2%;
+        color: #fff;
+
+        & .description {
+            font-weight: bolder;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        
+        & .points{
+            font-size: 1.5em;
+            font-weight: bolder;
+
+            & i {
+                color: yellow;
+            }
+        }
+
+        & .logo {
+            width: 50%;
+            & img {
+                width: 100%;
+            }
+           
+        }
+    }
+
+    & .shadow {
+        background-image: var(--shadow-banner);
+        height: 100%;
+    }
+}
+
+.container-swiper {
+    color: var(--color);
+    
+    & .title {
+        font-weight: bold;
+        font-size: 1em;
+        margin: 2rem;
+    }
+
+    & a {
+        color: white;
+    }
+
+    & .swiper {
+        & swiper-slide {
+            cursor: pointer;
+            border-radius: 7px;
+            margin: 40px 0;
+            transition: transform .5s ease;
+            
+            & img {
+                border-radius: 7px;
+                width: 100%;
+            }
+
+            &:hover {
+                z-index: 9999;
+                transform: scale(1.4);
+
+                & .content {
+                    display: block;
+                }
+                
+                &::after {
+                    border-radius: 7px;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    background-color: #808080b0;
+                    width: 100%;
+                }
+            }
+
+            & .content {
+                z-index: 99;
+                position: absolute;
+                display: none;
+                top: 0;
+
+                & .header {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 5px;
+                    font-weight: bold;
+                }
+
+                & .description {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+
+                & i {
+                    color: yellow;
+                }
+
+                
+                & .logo {
+                    width: 50%;
+                    & img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .banner {
+        background-position: center;
+
+        & .content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            left: 0;
+            top: 70%;
+            width: 100%;
+        }
+
+        & .description {
+            display: none;
+        }
+    }
+
+    .container-swiper {
+        margin: 1rem;
+    }
+}

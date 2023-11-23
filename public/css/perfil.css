@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.animes {
+    padding: 10px;
+    color: white;
+
+    & .bxs-star, & .bx-star {
+        color: yellow;
+    }
+
+    & a {
+        color: white;
+    }
+
+    .animeCard {
+        border: 1px solid #1F1F1F;
+        border-radius: 12px;
+        padding: 10px;
+    }
+
+    & .title {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 1rem;
+    }
+
+    & .titulo {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3em;
+        margin-bottom: 5px;
+    }
+
+    & .imagem {
+        display: flex;
+
+        & img {
+            max-width: 20%;
+        }
+    }
+}
+
+.forms {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 7px;
+
+    & .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .title {
+        font-size: 1.2em;
+        margin-bottom: 1rem;
+    }
+
+    & input {
+        margin-bottom: 10px;
+        outline: none;
+        padding: 5px;
+        border-radius: 7px;
+    }
+
+    & input[type="submit"] {
+        background-color: green;
+        margin-top: 10px;
+        color: white;
+        border: none;
+    }
+}
+
+.perfilContainer {
+    background-image: url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/280262193/original/178fc20d415852429fd35309edb1652310910b64/create-beautiful-anime-background-art.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #8080808e;
+    height: 50vh;
+
+    & .nameContainer {
+        background-color: #1313138a;
+        color: white;
+        width: fit-content;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        padding: 10px;
+        border-radius: 7px;
+
+        & .name {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        & .nickname {
+            color: gray;
+        }
+    }
+
+    & .edit {
+        cursor: pointer;
+        margin: 1rem;
+        position: absolute;
+        bottom: 50vh;
+        right: 0;
+        background-color: #000000;
+        border-radius: 7px;
+        padding: 10px;
+
+        & a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.stats {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #1F1F1F;
+    padding: 1rem 0;
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background-color: #000000;
+        padding: 12px 20px;
+    }
+}
+
+.view {
+    padding: 10px;
+    color: white;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & .title {
+        font-size: 1.3em;
+    }
+
+    & a {
+        color: white;
+    }
+
+    & .rating {
+        width: 60%;
+
+        & .avali {
+            background-color: #1F1F1F;
+            margin: 1rem;
+            line-break: anywhere;
+            padding: 10px;
+
+            & .rate {
+                text-align: justify;
+                font-size: 1.2em;
+
+                & i {
+                    color: yellow;
+                }
+
+            }
+
+            & .date {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    & .followers {
+        flex: 1;
+
+        & .usuario {
+            background-color: #1F1F1F;
+            border-radius: 7px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 1rem;
+
+            & button{
+                cursor: pointer;
+                background-color: #0c0c0c;
+                border: 1px solid #8080806c;
+                border-radius: 7px;
+                color: white;
+            }
+
+            & .totalFollowers {
+                color: gray;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .rating {
+        margin: 0;
+        padding: 5px;
+        flex: 1;
+    }
+}

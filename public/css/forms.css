@@ -1,0 +1,166 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main,
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.arrow {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    & i {
+        font-size: 2em;
+    }
+
+    & a {
+        color: #111;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+}
+
+
+.container {
+    display: flex;
+    height: 100vh;
+
+    & .forms {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+
+        & form {
+            width: 70%;
+
+
+            & label {
+                text-transform: capitalize;
+            }
+
+            & .title {
+                margin-bottom: 1rem;
+            }
+
+            & .row {
+                display: flex;
+                flex-direction: column;
+
+                margin: 0.5rem 0;
+
+                & .invalido {
+                    border: 1px solid red !important;
+                    outline: 1px solid red !important;
+                }
+
+                & .erro {
+                    color: red;
+                }
+
+
+                & .visu {
+                    user-select: none;
+
+                    & label {
+                        font-size: 1em;
+                    }
+
+                    & input {
+                        transform: translateY(2px);
+                    }
+                }
+
+                & label {
+                    font-size: 1.5em;
+                }
+
+                & input {
+                    border-radius: 7px;
+                    outline: none;
+                    border: 1px solid #80808063;
+                    padding: 15px;
+
+                    &:focus {
+                        border-color: #111;
+                    }
+
+                    &:hover {
+                        background-color: whitesmoke;
+                    }
+                }
+
+                & .right {
+                    border: 1px solid green;
+                    outline: 1px solid green;
+                }
+
+                & button {
+                    margin-top: 2rem;
+                    padding: 15px;
+                    border: 1px solid green;
+                    border-radius: 7px;
+                    font-weight: bolder;
+                    cursor: pointer;
+                    background-color: green;
+                    color: white;
+
+                    &:hover {
+                        background-color: rgb(4, 155, 4);
+                    }
+                }
+            }
+
+        }
+    }
+
+    & .image {
+        width: 50%;
+
+        & img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        background-image: url('../imgs/anime.webp');
+
+        & .title {
+            font-size: 1.7em;
+        }
+
+        & .image {
+            display: none;
+        }
+
+        & .forms {
+            border-radius: 7px;
+            margin: 15px;
+            width: 100%;
+
+            & form {
+                width: 80%;
+            }
+
+            background-color: white;
+
+            &>* {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
